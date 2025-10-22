@@ -9,48 +9,57 @@
         <meta name="description" content="Language Server Protocol Support for Emacs">
       
       
-        <link rel="canonical" href="https://emacs-lsp.github.io/lsp-mode/page/lsp-rust-analyzer/">
-      
-      
         <meta name="author" content="ercdll1337@gmail.com">
       
-      <link rel="shortcut icon" href="../../examples/logo-mini.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.0.0">
+      
+        <link rel="canonical" href="https://emacs-lsp.github.io/lsp-mode/page/lsp-rust-analyzer/">
+      
+      <link rel="icon" href="../../examples/logo-mini.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.0.0">
     
     
       
-        <title>Lsp rust analyzer - LSP Mode - LSP support for Emacs</title>
+        <title>Rust (rust-analyzer) - LSP Mode - LSP support for Emacs</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.1d877a71.min.css">
-      
-        
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.17bd0b03.min.css">
-        
-      
-    
-    
-    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ad626c1e.min.css">
       
         
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.9204c3b2.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
-    
     
     
       <link rel="stylesheet" href="../../stylesheets/layout.css">
     
       <link rel="stylesheet" href="../../stylesheets/members.css">
     
+    <script>function __md_scope(e,t,_){return new URL(_||(t===localStorage?"../..":"../.."),location).pathname+"."+e}function __md_get(e,t=localStorage,_){return JSON.parse(t.getItem(__md_scope(e,t,_)))}function __md_set(e,t,_=localStorage,o){try{_.setItem(__md_scope(e,_,o),JSON.stringify(t))}catch(e){}}</script>
     
       
-        
-<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-165661257-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview",document.location.pathname)})</script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
-      
+  
+
+
+
+  
+  
+
+
+
+  <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-165661257-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
+  <script async src="https://www.google-analytics.com/analytics.js"></script>
+
+
     
     
   </head>
@@ -62,8 +71,9 @@
     
     
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
-      
   
+    
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -79,47 +89,57 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="https://emacs-lsp.github.io/lsp-mode" title="LSP Mode - LSP support for Emacs" class="md-header-nav__button md-logo" aria-label="LSP Mode - LSP support for Emacs">
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="LSP Mode - LSP support for Emacs" class="md-header__button md-logo" aria-label="LSP Mode - LSP support for Emacs" data-md-component="logo">
       
   <img src="../../examples/logo-mini.png" alt="logo">
 
     </a>
-    <label class="md-header-nav__button md-icon" for="__drawer">
+    <label class="md-header__button md-icon" for="__drawer">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
     </label>
-    <div class="md-header-nav__title" data-md-component="header-title">
-      
-        <div class="md-header-nav__ellipsis">
-          <span class="md-header-nav__topic md-ellipsis">
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
             LSP Mode - LSP support for Emacs
           </span>
-          <span class="md-header-nav__topic md-ellipsis">
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
             
-              Lsp rust analyzer
+              Rust (rust-analyzer)
             
           </span>
         </div>
-      
+      </div>
     </div>
     
-      <label class="md-header-nav__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
       </label>
-      
-<div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
-      </button>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -135,9 +155,8 @@
 </div>
     
     
-      <div class="md-header-nav__source">
-        
-<a href="https://github.com/emacs-lsp/lsp-mode/" title="Go to repository" class="md-source">
+      <div class="md-header__source">
+        <a href="https://github.com/emacs-lsp/lsp-mode/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
@@ -149,6 +168,7 @@
       </div>
     
   </nav>
+  
 </header>
     
     <div class="md-container" data-md-component="container">
@@ -156,7 +176,7 @@
       
         
           
-
+            
 <nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
@@ -164,12 +184,15 @@
         
   
   
+
+
+  
+  
+  
     <li class="md-tabs__item">
-      
-        <a href="../.." class="md-tabs__link">
-          Home
-        </a>
-      
+      <a href="../.." class="md-tabs__link">
+        Home
+      </a>
     </li>
   
 
@@ -177,65 +200,23 @@
         
   
   
+
+
+  
+  
+  
+    
+
+  
+  
+  
     <li class="md-tabs__item">
-      
-        <a href="../languages/" class="md-tabs__link">
-          Languages
-        </a>
-      
+      <a href="../settings/mode/" class="md-tabs__link">
+        Settings
+      </a>
     </li>
   
 
-      
-        
-  
-  
-    <li class="md-tabs__item">
-      
-        <a href="https://emacs-lsp.github.io/dap-mode" class="md-tabs__link">
-          Debugging
-        </a>
-      
-    </li>
-  
-
-      
-        
-  
-  
-    <li class="md-tabs__item">
-      
-        <a href="../gallery/" class="md-tabs__link">
-          Gallery
-        </a>
-      
-    </li>
-  
-
-      
-        
-  
-  
-    <li class="md-tabs__item">
-      
-        <a href="../CHANGELOG/" class="md-tabs__link">
-          Changelog
-        </a>
-      
-    </li>
-  
-
-      
-        
-  
-  
-    <li class="md-tabs__item">
-      
-        <a href="../../tutorials/CPP-guide/" class="md-tabs__link">
-          Tutorials
-        </a>
-      
-    </li>
   
 
       
@@ -243,15 +224,101 @@
   
   
     
-    
+  
+
+
+  
   
   
     <li class="md-tabs__item">
+      <a href="../languages/" class="md-tabs__link md-tabs__link--active">
+        Languages
+      </a>
+    </li>
+  
+
       
-        <a href="../../blog/2020/7.0-release/" class="md-tabs__link">
-          Blog
-        </a>
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://emacs-lsp.github.io/dap-mode" class="md-tabs__link">
+        Debugging
+      </a>
+    </li>
+  
+
       
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../gallery/" class="md-tabs__link">
+        Gallery
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../CHANGELOG/" class="md-tabs__link">
+        Changelog
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../tutorials/CPP-guide/" class="md-tabs__link">
+        Tutorials
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../blog/2020/7.0-release/" class="md-tabs__link">
+        Blog
+      </a>
     </li>
   
 
@@ -261,12 +328,15 @@
         
   
   
+
+
+  
+  
+  
     <li class="md-tabs__item">
-      
-        <a href="https://opencollective.com/emacs-lsp" class="md-tabs__link">
-          Support us
-        </a>
-      
+      <a href="https://github.com/sponsors/emacs-lsp" class="md-tabs__link">
+        Support us
+      </a>
     </li>
   
 
@@ -274,18 +344,25 @@
     </ul>
   </div>
 </nav>
+          
         
       
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
             
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://emacs-lsp.github.io/lsp-mode" title="LSP Mode - LSP support for Emacs" class="md-nav__button md-logo" aria-label="LSP Mode - LSP support for Emacs">
+    <a href="../.." title="LSP Mode - LSP support for Emacs" class="md-nav__button md-logo" aria-label="LSP Mode - LSP support for Emacs" data-md-component="logo">
       
   <img src="../../examples/logo-mini.png" alt="logo">
 
@@ -294,8 +371,7 @@
   </label>
   
     <div class="md-nav__source">
-      
-<a href="https://github.com/emacs-lsp/lsp-mode/" title="Go to repository" class="md-source">
+      <a href="https://github.com/emacs-lsp/lsp-mode/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
@@ -312,1440 +388,2388 @@
       
       
 
-
-  <li class="md-nav__item md-nav__item--nested">
+  
+  
+  
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          Home
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Home" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Home
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
-    <label class="md-nav__link" for="nav-1">
-      Home
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Home" data-md-level="1">
-      <label class="md-nav__title" for="nav-1">
-        <span class="md-nav__icon md-icon"></span>
-        Home
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2" type="checkbox" id="__nav_1_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_2">
+          Setup
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Setup" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Setup
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          
-          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../.." title="Overview" class="md-nav__link">
-      Overview
-    </a>
-  </li>
-
-        
+            
           
-          
-          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../performance/" class="md-nav__link">
+        Performance
+      </a>
+    </li>
+  
 
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../main-features/" class="md-nav__link">
+        Main features
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keybindings/" class="md-nav__link">
+        Keybindings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2" type="checkbox" id="nav-1-2">
-    
-    <label class="md-nav__link" for="nav-1-2">
-      Setup
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Setup" data-md-level="2">
-      <label class="md-nav__title" for="nav-1-2">
-        <span class="md-nav__icon md-icon"></span>
-        Setup
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5" type="checkbox" id="__nav_1_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_5">
+          Extensions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Extensions" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_5">
+          <span class="md-nav__icon md-icon"></span>
+          Extensions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://emacs-lsp.github.io/lsp-ui" class="md-nav__link">
+        UI
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/emacs-lsp/lsp-treemacs" class="md-nav__link">
+        Treemacs
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/emacs-lsp/helm-lsp" class="md-nav__link">
+        Helm
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../installation/" title="Installation" class="md-nav__link">
-      Installation
-    </a>
-  </li>
-
-        
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/emacs-lsp/lsp-ivy" class="md-nav__link">
+        Ivy
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integration/iedit/" class="md-nav__link">
+        Iedit
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integration/ido/" class="md-nav__link">
+        Ido
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../performance/" title="Performance" class="md-nav__link">
-      Performance
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
+            
           
+        </ul>
+      </nav>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../file-watchers/" class="md-nav__link">
+        File watchers
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../remote/" class="md-nav__link">
+        Remote
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../main-features/" title="Main features" class="md-nav__link">
-      Main features
-    </a>
-  </li>
-
-        
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        Troubleshooting
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adding-new-language/" class="md-nav__link">
+        Adding new language
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../settings/" title="Settings" class="md-nav__link">
-      Settings
-    </a>
-  </li>
-
-        
+            
           
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../keybindings/" title="Keybindings" class="md-nav__link">
-      Keybindings
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-6" type="checkbox" id="nav-1-6">
-    
-    <label class="md-nav__link" for="nav-1-6">
-      Extensions
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Extensions" data-md-level="2">
-      <label class="md-nav__title" for="nav-1-6">
-        <span class="md-nav__icon md-icon"></span>
-        Extensions
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="https://emacs-lsp.github.io/lsp-ui" title="UI" class="md-nav__link">
-      UI
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="https://github.com/emacs-lsp/lsp-treemacs" title="Treemacs" class="md-nav__link">
-      Treemacs
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="https://github.com/emacs-lsp/helm-lsp" title="Helm" class="md-nav__link">
-      Helm
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="https://github.com/emacs-lsp/lsp-ivy" title="Ivy" class="md-nav__link">
-      Ivy
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../limitations/" title="Limitations" class="md-nav__link">
-      Limitations
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../remote/" title="Remote" class="md-nav__link">
-      Remote
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../faq/" title="FAQ" class="md-nav__link">
-      FAQ
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../troubleshooting/" title="Troubleshooting" class="md-nav__link">
-      Troubleshooting
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../adding-new-language/" title="Adding new language" class="md-nav__link">
-      Adding new language
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+        </ul>
+      </nav>
+    </li>
+  
 
     
       
       
       
 
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Settings
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Settings" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Settings
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          Features
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Features" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Features
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../settings/mode/" class="md-nav__link">
+        Core
+      </a>
+    </li>
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../settings/completion/" class="md-nav__link">
+        Completion
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../settings/diagnostics/" class="md-nav__link">
+        Diagnostics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../settings/headerline/" class="md-nav__link">
+        Headerline
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../settings/modeline/" class="md-nav__link">
+        Modeline
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../settings/lens/" class="md-nav__link">
+        Lens
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../settings/icons/" class="md-nav__link">
+        Icons
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../settings/semantic-tokens/" class="md-nav__link">
+        Semantic Tokens
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          Extensions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Extensions" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Extensions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://emacs-lsp.github.io/lsp-ui" class="md-nav__link">
+        UI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/emacs-lsp/lsp-treemacs" class="md-nav__link">
+        Treemacs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/emacs-lsp/helm-lsp" class="md-nav__link">
+        Helm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/emacs-lsp/lsp-ivy" class="md-nav__link">
+        Ivy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/gagbo/consult-lsp" class="md-nav__link">
+        Consult
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../settings/dired/" class="md-nav__link">
+        Dired
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../settings/iedit/" class="md-nav__link">
+        Iedit
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../settings/ido/" class="md-nav__link">
+        Ido
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
     
-    <label class="md-nav__link" for="nav-2">
-      Languages
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Languages" data-md-level="1">
-      <label class="md-nav__title" for="nav-2">
-        <span class="md-nav__icon md-icon"></span>
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Languages
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Languages" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Languages
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../languages/" class="md-nav__link">
         Languages
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../languages/" title="Languages" class="md-nav__link">
-      Languages
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-ada/" title="Ada" class="md-nav__link">
-      Ada
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-angular/" title="Angular" class="md-nav__link">
-      Angular
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-bash/" title="Bash" class="md-nav__link">
-      Bash
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-ccls/" title="C++ (ccls)" class="md-nav__link">
-      C++ (ccls)
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-clangd/" title="C++ (clangd)" class="md-nav__link">
-      C++ (clangd)
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-csharp/" title="C#" class="md-nav__link">
-      C#
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-clojure/" title="Clojure" class="md-nav__link">
-      Clojure
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-cmake/" title="CMake" class="md-nav__link">
-      CMake
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-crystal/" title="Crystal" class="md-nav__link">
-      Crystal
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-css/" title="CSS/LessCSS/SASS/SCSS" class="md-nav__link">
-      CSS/LessCSS/SASS/SCSS
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="https://emacs-lsp.github.io/lsp-dart" title="Dart" class="md-nav__link">
-      Dart
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-dhall/" title="Dhall" class="md-nav__link">
-      Dhall
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-dockerfile/" title="Dockerfile" class="md-nav__link">
-      Dockerfile
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-elixir/" title="Elixir" class="md-nav__link">
-      Elixir
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-elm/" title="Elm" class="md-nav__link">
-      Elm
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-erlang/" title="Erlang" class="md-nav__link">
-      Erlang
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-eslint/" title="Eslint" class="md-nav__link">
-      Eslint
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-fsharp/" title="F#" class="md-nav__link">
-      F#
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-fortran/" title="Fortran" class="md-nav__link">
-      Fortran
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-gdscript/" title="GDScript" class="md-nav__link">
-      GDScript
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-gopls/" title="Go (gopls)" class="md-nav__link">
-      Go (gopls)
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-bingo.md" title="Go (bingo)" class="md-nav__link">
-      Go (bingo)
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-groovy/" title="Groovy" class="md-nav__link">
-      Groovy
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-hack/" title="Hack" class="md-nav__link">
-      Hack
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-html/" title="HTML" class="md-nav__link">
-      HTML
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="https://emacs-lsp.github.io/lsp-haskell" title="Haskell" class="md-nav__link">
-      Haskell
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-emmy-lua/" title="Lua (EmmyLua)" class="md-nav__link">
-      Lua (EmmyLua)
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-lua-language-server/" title="Lua (Lua Language Server)" class="md-nav__link">
-      Lua (Lua Language Server)
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-lua-lsp/" title="Lua (Lua-Lsp)" class="md-nav__link">
-      Lua (Lua-Lsp)
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="https://emacs-lsp.github.io/lsp-java" title="Java" class="md-nav__link">
-      Java
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-typescript-javascript/" title="JavaScript/TypeScript (sourcegraph)" class="md-nav__link">
-      JavaScript/TypeScript (sourcegraph)
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-typescript/" title="JavaScript/TypeScript (theia-ide)" class="md-nav__link">
-      JavaScript/TypeScript (theia-ide)
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-flow/" title="JavaScript Flow" class="md-nav__link">
-      JavaScript Flow
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-json/" title="Json" class="md-nav__link">
-      Json
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-julia/" title="Julia" class="md-nav__link">
-      Julia
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-kotlin/" title="Kotlin" class="md-nav__link">
-      Kotlin
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="https://emacs-lsp.github.io/lsp-mssql" title="MSSQL" class="md-nav__link">
-      MSSQL
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-nim/" title="Nim" class="md-nav__link">
-      Nim
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-nix/" title="Nix" class="md-nav__link">
-      Nix
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-ocaml/" title="OCaml (ocaml)" class="md-nav__link">
-      OCaml (ocaml)
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-ocaml-lsp-server/" title="OCaml (ocaml-lsp)" class="md-nav__link">
-      OCaml (ocaml-lsp)
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-pascal/" title="Pascal/Object Pascal" class="md-nav__link">
-      Pascal/Object Pascal
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-perl/" title="Perl" class="md-nav__link">
-      Perl
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-intelephense/" title="PHP (intelephense)" class="md-nav__link">
-      PHP (intelephense)
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-serenata/" title="PHP (Serenata)" class="md-nav__link">
-      PHP (Serenata)
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-php/" title="PHP (felixbecker)" class="md-nav__link">
-      PHP (felixbecker)
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-pwsh/" title="Powershell" class="md-nav__link">
-      Powershell
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-prolog/" title="Prolog" class="md-nav__link">
-      Prolog
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-purescript/" title="PureScript" class="md-nav__link">
-      PureScript
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-jedi/" title="Python (Jedi Language Server)" class="md-nav__link">
-      Python (Jedi Language Server)
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-pyls/" title="Python (Palantir)" class="md-nav__link">
-      Python (Palantir)
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="https://emacs-lsp.github.io/lsp-pyright" title="Python (Pyright)" class="md-nav__link">
-      Python (Pyright)
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="https://emacs-lsp.github.io/lsp-python-ms" title="Python (Microsoft)" class="md-nav__link">
-      Python (Microsoft)
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-r/" title="R" class="md-nav__link">
-      R
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-racket-langserver/" title="Racket (jeapostrophe)" class="md-nav__link">
-      Racket (jeapostrophe)
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-racket-language-server/" title="Racket (Theia)" class="md-nav__link">
-      Racket (Theia)
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-solargraph/" title="Ruby" class="md-nav__link">
-      Ruby
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-rust/" title="Rust" class="md-nav__link">
-      Rust
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="https://emacs-lsp.github.io/lsp-metals" title="Scala" class="md-nav__link">
-      Scala
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-sqls/" title="SQL (sqls)" class="md-nav__link">
-      SQL (sqls)
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-svelte/" title="Svelte" class="md-nav__link">
-      Svelte
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="https://emacs-lsp.github.io/lsp-sourcekit" title="Swift" class="md-nav__link">
-      Swift
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-terraform/" title="Terraform" class="md-nav__link">
-      Terraform
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-tex/" title="TeX, LaTeX, etc (digestif)" class="md-nav__link">
-      TeX, LaTeX, etc (digestif)
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-texlab/" title="TeX, LaTeX, etc (texlab)" class="md-nav__link">
-      TeX, LaTeX, etc (texlab)
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-latex/" title="TeX, LaTeX, etc (texlab, external)" class="md-nav__link">
-      TeX, LaTeX, etc (texlab, external)
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-verilog/" title="Verilog/SystemVerilog" class="md-nav__link">
-      Verilog/SystemVerilog
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-vhdl/" title="VHDL" class="md-nav__link">
-      VHDL
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-vim/" title="Vimscript" class="md-nav__link">
-      Vimscript
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-vetur/" title="Vue" class="md-nav__link">
-      Vue
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-xml/" title="XML" class="md-nav__link">
-      XML
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lsp-yaml/" title="YAML" class="md-nav__link">
-      YAML
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
-    
-    <label class="md-nav__link" for="nav-3">
-      Debugging
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Debugging" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
-        <span class="md-nav__icon md-icon"></span>
-        Debugging
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="https://emacs-lsp.github.io/dap-mode" title="None" class="md-nav__link">
-      None
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
-    
-    <label class="md-nav__link" for="nav-4">
-      Gallery
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Gallery" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
-        <span class="md-nav__icon md-icon"></span>
-        Gallery
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../gallery/" title="Gallery" class="md-nav__link">
-      Gallery
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
-    
-    <label class="md-nav__link" for="nav-5">
-      Changelog
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Changelog" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
-        <span class="md-nav__icon md-icon"></span>
-        Changelog
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../CHANGELOG/" title="Changelog" class="md-nav__link">
-      Changelog
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
-    
-    <label class="md-nav__link" for="nav-6">
-      Tutorials
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
-        <span class="md-nav__icon md-icon"></span>
-        Tutorials
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../tutorials/CPP-guide/" title="Configuring Emacs a C/C++ IDE" class="md-nav__link">
-      Configuring Emacs a C/C++ IDE
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../tutorials/how-to-turn-off/" title="A guide on disabling/enabling lsp-mode features" class="md-nav__link">
-      A guide on disabling/enabling lsp-mode features
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
-    
-    <label class="md-nav__link" for="nav-7">
-      Blog
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Blog" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
-        <span class="md-nav__icon md-icon"></span>
-        Blog
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-1" type="checkbox" id="nav-7-1">
-    
-    <label class="md-nav__link" for="nav-7-1">
-      2020
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="2020" data-md-level="2">
-      <label class="md-nav__title" for="nav-7-1">
-        <span class="md-nav__icon md-icon"></span>
-        2020
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../blog/2020/7.0-release/" title="7.0 Release" class="md-nav__link">
-      7.0 Release
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
-    
-    <label class="md-nav__link" for="nav-8">
-      Support us
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Support us" data-md-level="1">
-      <label class="md-nav__title" for="nav-8">
-        <span class="md-nav__icon md-icon"></span>
-        Support us
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="https://opencollective.com/emacs-lsp" title="None" class="md-nav__link">
-      None
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-  </ul>
-</nav>
-                  </div>
-                </div>
-              </div>
             
+          
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-actionscript/" class="md-nav__link">
+        ActionScript
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-ada/" class="md-nav__link">
+        Ada
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-angular/" class="md-nav__link">
+        Angular
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-ansible/" class="md-nav__link">
+        Ansible
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-asm/" class="md-nav__link">
+        Assembly
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-astro/" class="md-nav__link">
+        Astro
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-autotools/" class="md-nav__link">
+        Autotools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-awk/" class="md-nav__link">
+        AWK
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-bash/" class="md-nav__link">
+        Bash
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-beancount/" class="md-nav__link">
+        Beancount
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-buf/" class="md-nav__link">
+        Buf/Protocol Buffers (Buf CLI)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-bufls/" class="md-nav__link">
+        Buf/Protocol Buffers (Buf Language Server)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-camel/" class="md-nav__link">
+        Camel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-ccls/" class="md-nav__link">
+        C++ (ccls)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-clangd/" class="md-nav__link">
+        C++ (clangd)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-csharp-omnisharp/" class="md-nav__link">
+        C# (omnisharp-roslyn)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-csharp-roslyn/" class="md-nav__link">
+        C# (csharp-roslyn)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-csharp-ls/" class="md-nav__link">
+        C# (csharp-ls)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-c3-lsp/" class="md-nav__link">
+        C3 (c3-lsp)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-clojure/" class="md-nav__link">
+        Clojure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-cmake/" class="md-nav__link">
+        CMake
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-cobol/" class="md-nav__link">
+        COBOL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-crystal/" class="md-nav__link">
+        Crystal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-css/" class="md-nav__link">
+        CSS/LessCSS/SASS/SCSS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-cucumber/" class="md-nav__link">
+        Cucumber
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-cypher/" class="md-nav__link">
+        Cypher
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-d/" class="md-nav__link">
+        D
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://emacs-lsp.github.io/lsp-dart" class="md-nav__link">
+        Dart
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-dhall/" class="md-nav__link">
+        Dhall
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-dockerfile/" class="md-nav__link">
+        Dockerfile
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-earthly/" class="md-nav__link">
+        Earthfile
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-elixir/" class="md-nav__link">
+        Elixir
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-elm/" class="md-nav__link">
+        Elm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/elisp-lsp/ellsp" class="md-nav__link">
+        Emacs Lisp (Ellsp)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/emacs-elsa/Elsa" class="md-nav__link">
+        Emacs Lisp (Elsa)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-emmet/" class="md-nav__link">
+        Emmet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-erlang.md" class="md-nav__link">
+        Erlang
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-eslint/" class="md-nav__link">
+        ESLint
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-fsharp/" class="md-nav__link">
+        F#
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-fortran/" class="md-nav__link">
+        Fortran
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-futhark/" class="md-nav__link">
+        Futhark
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-gdscript/" class="md-nav__link">
+        GDScript
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-copilot/" class="md-nav__link">
+        GitHub Copilot
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-gleam/" class="md-nav__link">
+        Gleam
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-glsl/" class="md-nav__link">
+        GLSL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-gpr/" class="md-nav__link">
+        GNAT Project
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../manual-language-docs/lsp-gopls/" class="md-nav__link">
+        Go (gopls)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-grammarly/" class="md-nav__link">
+        Grammarly
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-graphql/" class="md-nav__link">
+        GraphQL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-groovy/" class="md-nav__link">
+        Groovy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-hack/" class="md-nav__link">
+        Hack
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-html/" class="md-nav__link">
+        HTML
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://emacs-lsp.github.io/lsp-haskell" class="md-nav__link">
+        Haskell
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-hy.md" class="md-nav__link">
+        Hy (hyuga)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-idris/" class="md-nav__link">
+        Idris
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://emacs-lsp.github.io/lsp-java" class="md-nav__link">
+        Java
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-deno/" class="md-nav__link">
+        Javascript/Typescript (deno)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-typescript-javascript/" class="md-nav__link">
+        JavaScript/TypeScript (sourcegraph)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-typescript/" class="md-nav__link">
+        JavaScript/TypeScript (theia-ide)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-flow/" class="md-nav__link">
+        JavaScript Flow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-json/" class="md-nav__link">
+        Json
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-jsonnet/" class="md-nav__link">
+        Jsonnet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-julia/" class="md-nav__link">
+        Julia
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-kotlin/" class="md-nav__link">
+        Kotlin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-ltex/" class="md-nav__link">
+        LanguageTool (LTEX)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-ltex-plus/" class="md-nav__link">
+        LanguageTool (LTEX+)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-lisp/" class="md-nav__link">
+        Lisp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-emmy-lua/" class="md-nav__link">
+        Lua (EmmyLua)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-lua-language-server/" class="md-nav__link">
+        Lua (Lua Language Server)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-lua-lsp/" class="md-nav__link">
+        Lua (Lua-Lsp)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-fennel/" class="md-nav__link">
+        Fennel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-magik/" class="md-nav__link">
+        Magik
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-markdown/" class="md-nav__link">
+        Markdown
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-marksman/" class="md-nav__link">
+        Marksman
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-matlab/" class="md-nav__link">
+        MATLAB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-meson/" class="md-nav__link">
+        Meson
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-move/" class="md-nav__link">
+        Move
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-mdx/" class="md-nav__link">
+        MDX
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://emacs-lsp.github.io/lsp-mssql" class="md-nav__link">
+        MSSQL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-nextflow/" class="md-nav__link">
+        Nextflow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-nginx/" class="md-nav__link">
+        Nginx
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-nim/" class="md-nav__link">
+        Nim
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-nix-nixd/" class="md-nav__link">
+        Nix (nixd-lsp)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-nix-rnix/" class="md-nav__link">
+        Nix (rnix-lsp)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-nix-nil/" class="md-nav__link">
+        Nix (nil)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-nushell/" class="md-nav__link">
+        Nushell
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-ocaml-lsp-server/" class="md-nav__link">
+        OCaml (ocaml-lsp)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-odin-ols-server.md" class="md-nav__link">
+        Odin (ols)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-openscad/" class="md-nav__link">
+        OpenSCAD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-pascal/" class="md-nav__link">
+        Pascal/Object Pascal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-pls/" class="md-nav__link">
+        Perl (PLS)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-perl/" class="md-nav__link">
+        Perl (Perl::LanguageServer)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-perlnavigator/" class="md-nav__link">
+        Perl (Navigator)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-intelephense/" class="md-nav__link">
+        PHP (intelephense)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-serenata/" class="md-nav__link">
+        PHP (Serenata)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-php/" class="md-nav__link">
+        PHP (felixbecker)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-phpactor/" class="md-nav__link">
+        PHP (phpactor)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-pwsh/" class="md-nav__link">
+        Powershell
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-prolog/" class="md-nav__link">
+        Prolog
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-purescript/" class="md-nav__link">
+        PureScript
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-pylsp/" class="md-nav__link">
+        Python (Pylsp)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-jedi/" class="md-nav__link">
+        Python (Jedi Language Server)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-pyls/" class="md-nav__link">
+        Python (Palantir deprecated)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://emacs-lsp.github.io/lsp-pyright" class="md-nav__link">
+        Python (Pyright)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://emacs-lsp.github.io/lsp-python-ms" class="md-nav__link">
+        Python (Microsoft)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-ruff/" class="md-nav__link">
+        Python (Ruff)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/astral-sh/ty" class="md-nav__link">
+        Python (ty)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-qml.md" class="md-nav__link">
+        QML
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-r/" class="md-nav__link">
+        R
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-racket-langserver/" class="md-nav__link">
+        Racket (jeapostrophe)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-racket-language-server/" class="md-nav__link">
+        Racket (Theia)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-roc/" class="md-nav__link">
+        Roc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-rpm-spec/" class="md-nav__link">
+        RPM Spec
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-rubocop/" class="md-nav__link">
+        Ruby (RuboCop)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-ruby-lsp/" class="md-nav__link">
+        Ruby (ruby-lsp)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-solargraph/" class="md-nav__link">
+        Ruby (Solargraph)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-sorbet/" class="md-nav__link">
+        Ruby (Sorbet)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-steep/" class="md-nav__link">
+        Ruby (Steep)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-typeprof/" class="md-nav__link">
+        Ruby (TypeProf)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Rust (rust-analyzer)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Rust (rust-analyzer)
+      </a>
+      
+        
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
   
   
     
@@ -1755,7 +2779,7 @@
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#server" class="md-nav__link">
@@ -1785,9 +2809,2317 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#server-note" class="md-nav__link">
+    Server note
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rust-analyzer" class="md-nav__link">
+    rust-analyzer
+  </a>
+  
+    <nav class="md-nav" aria-label="rust-analyzer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    Commands
+  </a>
+  
+    <nav class="md-nav" aria-label="Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-syntax-tree" class="md-nav__link">
+    lsp-rust-analyzer-syntax-tree
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-status" class="md-nav__link">
+    lsp-rust-analyzer-status
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-join-lines" class="md-nav__link">
+    lsp-rust-analyzer-join-lines
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inlay-hints" class="md-nav__link">
+    inlay-hints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macro-expansion" class="md-nav__link">
+    Macro expansion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto-import" class="md-nav__link">
+    auto-import
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snippet-insertionrefactor" class="md-nav__link">
+    Snippet insertion/refactor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-cargotoml" class="md-nav__link">
+    Open Cargo.toml
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-external-documentation" class="md-nav__link">
+    Open external documentation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find-and-execute-tests-related-to-current-position" class="md-nav__link">
+    Find and execute tests related to current position
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caveats" class="md-nav__link">
+    Caveats
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extract-signature" class="md-nav__link">
+    extract signature
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#available-configurations" class="md-nav__link">
     Available configurations
   </a>
+  
+    <nav class="md-nav" aria-label="Available configurations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-server" class="md-nav__link">
+    lsp-rust-server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-binding-mode-hints" class="md-nav__link">
+    lsp-rust-analyzer-binding-mode-hints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-call-info-full" class="md-nav__link">
+    lsp-rust-analyzer-call-info-full
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-cargo-auto-reload" class="md-nav__link">
+    lsp-rust-analyzer-cargo-auto-reload
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-cargo-extra-args" class="md-nav__link">
+    lsp-rust-analyzer-cargo-extra-args
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-cargo-extra-env" class="md-nav__link">
+    lsp-rust-analyzer-cargo-extra-env
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-cargo-override-command" class="md-nav__link">
+    lsp-rust-analyzer-cargo-override-command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-cargo-run-build-scripts" class="md-nav__link">
+    lsp-rust-analyzer-cargo-run-build-scripts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-cargo-target" class="md-nav__link">
+    lsp-rust-analyzer-cargo-target
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-cargo-target-dir" class="md-nav__link">
+    lsp-rust-analyzer-cargo-target-dir
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-cargo-unset-test" class="md-nav__link">
+    lsp-rust-analyzer-cargo-unset-test
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-cargo-watch-args" class="md-nav__link">
+    lsp-rust-analyzer-cargo-watch-args
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-cargo-watch-command" class="md-nav__link">
+    lsp-rust-analyzer-cargo-watch-command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-cargo-watch-enable" class="md-nav__link">
+    lsp-rust-analyzer-cargo-watch-enable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-cfg-set-test" class="md-nav__link">
+    lsp-rust-analyzer-cfg-set-test
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-check-all-targets" class="md-nav__link">
+    lsp-rust-analyzer-check-all-targets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-closing-brace-hints" class="md-nav__link">
+    lsp-rust-analyzer-closing-brace-hints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-closing-brace-hints-min-lines" class="md-nav__link">
+    lsp-rust-analyzer-closing-brace-hints-min-lines
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-closure-capture-hints" class="md-nav__link">
+    lsp-rust-analyzer-closure-capture-hints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-closure-return-type-hints" class="md-nav__link">
+    lsp-rust-analyzer-closure-return-type-hints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-closure-style" class="md-nav__link">
+    lsp-rust-analyzer-closure-style
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-completion-add-call-argument-snippets" class="md-nav__link">
+    lsp-rust-analyzer-completion-add-call-argument-snippets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-completion-add-call-parenthesis" class="md-nav__link">
+    lsp-rust-analyzer-completion-add-call-parenthesis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-completion-auto-import-enable" class="md-nav__link">
+    lsp-rust-analyzer-completion-auto-import-enable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-completion-auto-self-enable" class="md-nav__link">
+    lsp-rust-analyzer-completion-auto-self-enable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-completion-postfix-enable" class="md-nav__link">
+    lsp-rust-analyzer-completion-postfix-enable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-debug-lens-extra-dap-args" class="md-nav__link">
+    lsp-rust-analyzer-debug-lens-extra-dap-args
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-diagnostics-disabled" class="md-nav__link">
+    lsp-rust-analyzer-diagnostics-disabled
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-diagnostics-enable" class="md-nav__link">
+    lsp-rust-analyzer-diagnostics-enable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-diagnostics-enable-experimental" class="md-nav__link">
+    lsp-rust-analyzer-diagnostics-enable-experimental
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-diagnostics-warnings-as-hint" class="md-nav__link">
+    lsp-rust-analyzer-diagnostics-warnings-as-hint
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-diagnostics-warnings-as-info" class="md-nav__link">
+    lsp-rust-analyzer-diagnostics-warnings-as-info
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-discriminants-hints" class="md-nav__link">
+    lsp-rust-analyzer-discriminants-hints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-display-chaining-hints" class="md-nav__link">
+    lsp-rust-analyzer-display-chaining-hints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-display-closure-return-type-hints" class="md-nav__link">
+    lsp-rust-analyzer-display-closure-return-type-hints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-display-lifetime-elision-hints-enable" class="md-nav__link">
+    lsp-rust-analyzer-display-lifetime-elision-hints-enable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-display-lifetime-elision-hints-use-parameter-names" class="md-nav__link">
+    lsp-rust-analyzer-display-lifetime-elision-hints-use-parameter-names
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-display-parameter-hints" class="md-nav__link">
+    lsp-rust-analyzer-display-parameter-hints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-display-reborrow-hints" class="md-nav__link">
+    lsp-rust-analyzer-display-reborrow-hints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-download-url" class="md-nav__link">
+    lsp-rust-analyzer-download-url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-exclude-dirs" class="md-nav__link">
+    lsp-rust-analyzer-exclude-dirs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-exclude-globs" class="md-nav__link">
+    lsp-rust-analyzer-exclude-globs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-experimental-proc-attr-macros" class="md-nav__link">
+    lsp-rust-analyzer-experimental-proc-attr-macros
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-expression-adjustment-hide-unsafe" class="md-nav__link">
+    lsp-rust-analyzer-expression-adjustment-hide-unsafe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-expression-adjustment-hints" class="md-nav__link">
+    lsp-rust-analyzer-expression-adjustment-hints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-expression-adjustment-hints-mode" class="md-nav__link">
+    lsp-rust-analyzer-expression-adjustment-hints-mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-hide-closure-initialization" class="md-nav__link">
+    lsp-rust-analyzer-hide-closure-initialization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-hide-named-constructor" class="md-nav__link">
+    lsp-rust-analyzer-hide-named-constructor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-highlight-breakpoints" class="md-nav__link">
+    lsp-rust-analyzer-highlight-breakpoints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-highlight-closure-captures" class="md-nav__link">
+    lsp-rust-analyzer-highlight-closure-captures
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-highlight-exit-points" class="md-nav__link">
+    lsp-rust-analyzer-highlight-exit-points
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-highlight-references" class="md-nav__link">
+    lsp-rust-analyzer-highlight-references
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-highlight-yield-points" class="md-nav__link">
+    lsp-rust-analyzer-highlight-yield-points
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-highlighting-strings" class="md-nav__link">
+    lsp-rust-analyzer-highlighting-strings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-implicit-drops" class="md-nav__link">
+    lsp-rust-analyzer-implicit-drops
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-import-enforce-granularity" class="md-nav__link">
+    lsp-rust-analyzer-import-enforce-granularity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-import-granularity" class="md-nav__link">
+    lsp-rust-analyzer-import-granularity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-import-group" class="md-nav__link">
+    lsp-rust-analyzer-import-group
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-import-prefix" class="md-nav__link">
+    lsp-rust-analyzer-import-prefix
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-imports-merge-glob" class="md-nav__link">
+    lsp-rust-analyzer-imports-merge-glob
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-library-directories" class="md-nav__link">
+    lsp-rust-analyzer-library-directories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-linked-projects" class="md-nav__link">
+    lsp-rust-analyzer-linked-projects
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-lru-capacity" class="md-nav__link">
+    lsp-rust-analyzer-lru-capacity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-macro-expansion-method" class="md-nav__link">
+    lsp-rust-analyzer-macro-expansion-method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-max-inlay-hint-length" class="md-nav__link">
+    lsp-rust-analyzer-max-inlay-hint-length
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-proc-macro-enable" class="md-nav__link">
+    lsp-rust-analyzer-proc-macro-enable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-rustc-source" class="md-nav__link">
+    lsp-rust-analyzer-rustc-source
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-rustfmt-extra-args" class="md-nav__link">
+    lsp-rust-analyzer-rustfmt-extra-args
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-rustfmt-override-command" class="md-nav__link">
+    lsp-rust-analyzer-rustfmt-override-command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-rustfmt-rangeformatting-enable" class="md-nav__link">
+    lsp-rust-analyzer-rustfmt-rangeformatting-enable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-server-command" class="md-nav__link">
+    lsp-rust-analyzer-server-command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-server-format-inlay-hints" class="md-nav__link">
+    lsp-rust-analyzer-server-format-inlay-hints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-store-path" class="md-nav__link">
+    lsp-rust-analyzer-store-path
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-use-client-watching" class="md-nav__link">
+    lsp-rust-analyzer-use-client-watching
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-use-rustc-wrapper-for-build-scripts" class="md-nav__link">
+    lsp-rust-analyzer-use-rustc-wrapper-for-build-scripts
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-rust-rls/" class="md-nav__link">
+        Rust (rls)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://emacs-lsp.github.io/lsp-metals" class="md-nav__link">
+        Scala
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-semgrep/" class="md-nav__link">
+        Semgrep
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-shader/" class="md-nav__link">
+        ShaderLab
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-sql/" class="md-nav__link">
+        SQL (sql)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-sqls/" class="md-nav__link">
+        SQL (sqls)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-postgres/" class="md-nav__link">
+        SQL (postgres-ls)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-sml.md" class="md-nav__link">
+        Standard ML (Millet)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-svelte/" class="md-nav__link">
+        Svelte
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://emacs-lsp.github.io/lsp-sourcekit" class="md-nav__link">
+        Swift
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-terraform/" class="md-nav__link">
+        Terraform (terraform-lsp)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-terraform-ls/" class="md-nav__link">
+        Terraform (terraform-ls)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-tex/" class="md-nav__link">
+        TeX, LaTeX, etc (digestif)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-texlab/" class="md-nav__link">
+        TeX, LaTeX, etc (texlab)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-latex/" class="md-nav__link">
+        TeX, LaTeX, etc (texlab, external)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-tilt/" class="md-nav__link">
+        Tilt
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-toml/" class="md-nav__link">
+        TOML (Taplo)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-toml-tombi/" class="md-nav__link">
+        TOML (Tombi)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-ts-query/" class="md-nav__link">
+        Tree-sitter Query
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-trunk/" class="md-nav__link">
+        Trunk
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-ttcn3/" class="md-nav__link">
+        TTCN3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-typespec/" class="md-nav__link">
+        TypeSpec
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-v/" class="md-nav__link">
+        V
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-vala/" class="md-nav__link">
+        Vala
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-verilog/" class="md-nav__link">
+        Verilog/SystemVerilog (hdl-checker)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-svlangserver/" class="md-nav__link">
+        Verilog/SystemVerilog (svlangserver)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-verible/" class="md-nav__link">
+        Verilog/SystemVerilog (verible)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-vhdl/" class="md-nav__link">
+        VHDL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-vimscript/" class="md-nav__link">
+        Vimscript
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-vetur/" class="md-nav__link">
+        Vue 2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-volar/" class="md-nav__link">
+        Vue 3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-wgsl.md" class="md-nav__link">
+        wgsl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-xml/" class="md-nav__link">
+        XML
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-yaml/" class="md-nav__link">
+        YAML
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-kubernetes-helm.md" class="md-nav__link">
+        YAML (helm-ls)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-yang/" class="md-nav__link">
+        YANG
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsp-zig/" class="md-nav__link">
+        Zig
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Debugging
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Debugging" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Debugging
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://emacs-lsp.github.io/dap-mode" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Gallery
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Gallery" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Gallery
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gallery/" class="md-nav__link">
+        Gallery
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Changelog
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Changelog" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Changelog
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CHANGELOG/" class="md-nav__link">
+        Changelog
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Tutorials
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/CPP-guide/" class="md-nav__link">
+        Configuring Emacs as a C/C++ IDE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/php-guide/" class="md-nav__link">
+        Configuring Emacs as a PHP IDE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/how-to-turn-off/" class="md-nav__link">
+        A guide on disabling/enabling lsp-mode features
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/reactjs-tutorial/" class="md-nav__link">
+        React JavaScript Tutorial in Emacs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/clojure-guide/" class="md-nav__link">
+        Configuring Emacs as a Clojure IDE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/debugging-clojure-script/" class="md-nav__link">
+        Debugging Clojurescript
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://emacs-lsp.github.io/dap-mode/page/python-poetry-pyenv/" class="md-nav__link">
+        Python, debbuging with poetry + pyenv
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/crystal-guide/" class="md-nav__link">
+        Configuring Emacs as a Crystal IDE
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Blog
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Blog" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Blog
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1" type="checkbox" id="__nav_8_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_1">
+          2020
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2020" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_1">
+          <span class="md-nav__icon md-icon"></span>
+          2020
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/2020/7.0-release/" class="md-nav__link">
+        7.0 Release
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          Support us
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Support us" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Support us
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/sponsors/emacs-lsp" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#server" class="md-nav__link">
+    Server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#debugger-not-available" class="md-nav__link">
+    Debugger: Not available
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-note" class="md-nav__link">
+    Server note
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rust-analyzer" class="md-nav__link">
+    rust-analyzer
+  </a>
+  
+    <nav class="md-nav" aria-label="rust-analyzer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    Commands
+  </a>
+  
+    <nav class="md-nav" aria-label="Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-syntax-tree" class="md-nav__link">
+    lsp-rust-analyzer-syntax-tree
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-status" class="md-nav__link">
+    lsp-rust-analyzer-status
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-join-lines" class="md-nav__link">
+    lsp-rust-analyzer-join-lines
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inlay-hints" class="md-nav__link">
+    inlay-hints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macro-expansion" class="md-nav__link">
+    Macro expansion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto-import" class="md-nav__link">
+    auto-import
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snippet-insertionrefactor" class="md-nav__link">
+    Snippet insertion/refactor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-cargotoml" class="md-nav__link">
+    Open Cargo.toml
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-external-documentation" class="md-nav__link">
+    Open external documentation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find-and-execute-tests-related-to-current-position" class="md-nav__link">
+    Find and execute tests related to current position
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caveats" class="md-nav__link">
+    Caveats
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extract-signature" class="md-nav__link">
+    extract signature
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#available-configurations" class="md-nav__link">
+    Available configurations
+  </a>
+  
+    <nav class="md-nav" aria-label="Available configurations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-server" class="md-nav__link">
+    lsp-rust-server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-binding-mode-hints" class="md-nav__link">
+    lsp-rust-analyzer-binding-mode-hints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-call-info-full" class="md-nav__link">
+    lsp-rust-analyzer-call-info-full
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-cargo-auto-reload" class="md-nav__link">
+    lsp-rust-analyzer-cargo-auto-reload
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-cargo-extra-args" class="md-nav__link">
+    lsp-rust-analyzer-cargo-extra-args
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-cargo-extra-env" class="md-nav__link">
+    lsp-rust-analyzer-cargo-extra-env
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-cargo-override-command" class="md-nav__link">
+    lsp-rust-analyzer-cargo-override-command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-cargo-run-build-scripts" class="md-nav__link">
+    lsp-rust-analyzer-cargo-run-build-scripts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-cargo-target" class="md-nav__link">
+    lsp-rust-analyzer-cargo-target
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-cargo-target-dir" class="md-nav__link">
+    lsp-rust-analyzer-cargo-target-dir
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-cargo-unset-test" class="md-nav__link">
+    lsp-rust-analyzer-cargo-unset-test
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-cargo-watch-args" class="md-nav__link">
+    lsp-rust-analyzer-cargo-watch-args
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-cargo-watch-command" class="md-nav__link">
+    lsp-rust-analyzer-cargo-watch-command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-cargo-watch-enable" class="md-nav__link">
+    lsp-rust-analyzer-cargo-watch-enable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-cfg-set-test" class="md-nav__link">
+    lsp-rust-analyzer-cfg-set-test
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-check-all-targets" class="md-nav__link">
+    lsp-rust-analyzer-check-all-targets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-closing-brace-hints" class="md-nav__link">
+    lsp-rust-analyzer-closing-brace-hints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-closing-brace-hints-min-lines" class="md-nav__link">
+    lsp-rust-analyzer-closing-brace-hints-min-lines
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-closure-capture-hints" class="md-nav__link">
+    lsp-rust-analyzer-closure-capture-hints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-closure-return-type-hints" class="md-nav__link">
+    lsp-rust-analyzer-closure-return-type-hints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-closure-style" class="md-nav__link">
+    lsp-rust-analyzer-closure-style
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-completion-add-call-argument-snippets" class="md-nav__link">
+    lsp-rust-analyzer-completion-add-call-argument-snippets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-completion-add-call-parenthesis" class="md-nav__link">
+    lsp-rust-analyzer-completion-add-call-parenthesis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-completion-auto-import-enable" class="md-nav__link">
+    lsp-rust-analyzer-completion-auto-import-enable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-completion-auto-self-enable" class="md-nav__link">
+    lsp-rust-analyzer-completion-auto-self-enable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-completion-postfix-enable" class="md-nav__link">
+    lsp-rust-analyzer-completion-postfix-enable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-debug-lens-extra-dap-args" class="md-nav__link">
+    lsp-rust-analyzer-debug-lens-extra-dap-args
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-diagnostics-disabled" class="md-nav__link">
+    lsp-rust-analyzer-diagnostics-disabled
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-diagnostics-enable" class="md-nav__link">
+    lsp-rust-analyzer-diagnostics-enable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-diagnostics-enable-experimental" class="md-nav__link">
+    lsp-rust-analyzer-diagnostics-enable-experimental
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-diagnostics-warnings-as-hint" class="md-nav__link">
+    lsp-rust-analyzer-diagnostics-warnings-as-hint
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-diagnostics-warnings-as-info" class="md-nav__link">
+    lsp-rust-analyzer-diagnostics-warnings-as-info
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-discriminants-hints" class="md-nav__link">
+    lsp-rust-analyzer-discriminants-hints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-display-chaining-hints" class="md-nav__link">
+    lsp-rust-analyzer-display-chaining-hints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-display-closure-return-type-hints" class="md-nav__link">
+    lsp-rust-analyzer-display-closure-return-type-hints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-display-lifetime-elision-hints-enable" class="md-nav__link">
+    lsp-rust-analyzer-display-lifetime-elision-hints-enable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-display-lifetime-elision-hints-use-parameter-names" class="md-nav__link">
+    lsp-rust-analyzer-display-lifetime-elision-hints-use-parameter-names
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-display-parameter-hints" class="md-nav__link">
+    lsp-rust-analyzer-display-parameter-hints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-display-reborrow-hints" class="md-nav__link">
+    lsp-rust-analyzer-display-reborrow-hints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-download-url" class="md-nav__link">
+    lsp-rust-analyzer-download-url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-exclude-dirs" class="md-nav__link">
+    lsp-rust-analyzer-exclude-dirs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-exclude-globs" class="md-nav__link">
+    lsp-rust-analyzer-exclude-globs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-experimental-proc-attr-macros" class="md-nav__link">
+    lsp-rust-analyzer-experimental-proc-attr-macros
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-expression-adjustment-hide-unsafe" class="md-nav__link">
+    lsp-rust-analyzer-expression-adjustment-hide-unsafe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-expression-adjustment-hints" class="md-nav__link">
+    lsp-rust-analyzer-expression-adjustment-hints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-expression-adjustment-hints-mode" class="md-nav__link">
+    lsp-rust-analyzer-expression-adjustment-hints-mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-hide-closure-initialization" class="md-nav__link">
+    lsp-rust-analyzer-hide-closure-initialization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-hide-named-constructor" class="md-nav__link">
+    lsp-rust-analyzer-hide-named-constructor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-highlight-breakpoints" class="md-nav__link">
+    lsp-rust-analyzer-highlight-breakpoints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-highlight-closure-captures" class="md-nav__link">
+    lsp-rust-analyzer-highlight-closure-captures
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-highlight-exit-points" class="md-nav__link">
+    lsp-rust-analyzer-highlight-exit-points
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-highlight-references" class="md-nav__link">
+    lsp-rust-analyzer-highlight-references
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-highlight-yield-points" class="md-nav__link">
+    lsp-rust-analyzer-highlight-yield-points
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-highlighting-strings" class="md-nav__link">
+    lsp-rust-analyzer-highlighting-strings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-implicit-drops" class="md-nav__link">
+    lsp-rust-analyzer-implicit-drops
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-import-enforce-granularity" class="md-nav__link">
+    lsp-rust-analyzer-import-enforce-granularity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-import-granularity" class="md-nav__link">
+    lsp-rust-analyzer-import-granularity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-import-group" class="md-nav__link">
+    lsp-rust-analyzer-import-group
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-import-prefix" class="md-nav__link">
+    lsp-rust-analyzer-import-prefix
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-imports-merge-glob" class="md-nav__link">
+    lsp-rust-analyzer-imports-merge-glob
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-library-directories" class="md-nav__link">
+    lsp-rust-analyzer-library-directories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-linked-projects" class="md-nav__link">
+    lsp-rust-analyzer-linked-projects
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-lru-capacity" class="md-nav__link">
+    lsp-rust-analyzer-lru-capacity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-macro-expansion-method" class="md-nav__link">
+    lsp-rust-analyzer-macro-expansion-method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-max-inlay-hint-length" class="md-nav__link">
+    lsp-rust-analyzer-max-inlay-hint-length
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-proc-macro-enable" class="md-nav__link">
+    lsp-rust-analyzer-proc-macro-enable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-rustc-source" class="md-nav__link">
+    lsp-rust-analyzer-rustc-source
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-rustfmt-extra-args" class="md-nav__link">
+    lsp-rust-analyzer-rustfmt-extra-args
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-rustfmt-override-command" class="md-nav__link">
+    lsp-rust-analyzer-rustfmt-override-command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-rustfmt-rangeformatting-enable" class="md-nav__link">
+    lsp-rust-analyzer-rustfmt-rangeformatting-enable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-server-command" class="md-nav__link">
+    lsp-rust-analyzer-server-command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-server-format-inlay-hints" class="md-nav__link">
+    lsp-rust-analyzer-server-format-inlay-hints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-store-path" class="md-nav__link">
+    lsp-rust-analyzer-store-path
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-use-client-watching" class="md-nav__link">
+    lsp-rust-analyzer-use-client-watching
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-rust-analyzer-use-rustc-wrapper-for-build-scripts" class="md-nav__link">
+    lsp-rust-analyzer-use-rustc-wrapper-for-build-scripts
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1799,109 +5131,675 @@
               </div>
             
           
-          <div class="md-content">
+          <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
-                
-                  <a href="https://github.com/emacs-lsp/lsp-mode/edit/master/docs/page/lsp-rust-analyzer.md" title="Edit this page" class="md-content__button md-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
-                  </a>
-                
-                
-                <h1 id="rust">Rust<a class="headerlink" href="#rust" title="Permanent link">#</a></h1>
-<h2 id="server">Server<a class="headerlink" href="#server" title="Permanent link">#</a></h2>
-<p>For information about the LSP server, check the <a href="https://github.com/rust-analyzer/rust-analyzer">rust-analyzer</a>.</p>
-<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">#</a></h2>
-<p>For more instructions on how to install, check <a href="https://github.com/rust-analyzer/rust-analyzer#language-server-quick-start">here</a>.</p>
-<h3 id="debugger-not-available">Debugger: Not available<a class="headerlink" href="#debugger-not-available" title="Permanent link">#</a></h3>
-<h2 id="available-configurations">Available configurations<a class="headerlink" href="#available-configurations" title="Permanent link">#</a></h2>
-                
-                  
-                    
+                <!--
+  Copyright (c) 2016-2022 Martin Donath <martin.donath@squidfunk.com>
 
-<hr>
-<div class="md-source-date">
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Edit button -->
+
+<a
+  href="https://github.com/emacs-lsp/lsp-mode/edit/master/clients/lsp-rust.el"
+  title="Edit this page"
+  class="md-content__button md-icon"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+<!-- Tags -->
+
+
+<!--
+  Hack: check whether the content contains a h1 headline. If it
+  doesn't, the page title (or respectively site name) is used
+  as the main headline.
+-->
+
+
+<!-- Markdown content -->
+<h1 id="rust">Rust<a class="headerlink" href="#rust" title="Permanent link">#</a></h1>
+<h2 id="server">Server<a class="headerlink" href="#server" title="Permanent link">#</a></h2>
+<p>For more information about the LSP server, check <a href="https://github.com/rust-analyzer/rust-analyzer">rust-analyzer</a>.</p>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">#</a></h2>
+<p>For more instructions on how to install manually, check <a href="https://github.com/rust-analyzer/rust-analyzer#language-server-quick-start">here</a>.</p>
+<h3 id="debugger-not-available">Debugger: Not available<a class="headerlink" href="#debugger-not-available" title="Permanent link">#</a></h3>
+<hr />
+<p>author: yyoncho
+template: comment.html
+root_file: docs/manual-language-docs/lsp-rust-analyzer.md</p>
+<hr />
+<h2 id="server-note">Server note<a class="headerlink" href="#server-note" title="Permanent link">#</a></h2>
+<p>NOTE: If you are using <code>rustic-mode</code>, you have to change <code>rustic-lsp-server</code> instead of <code>lsp-rust-server</code>, since it also supports eglot as a lightweight alternative to lsp-mode.</p>
+<ul>
+<li>
+<p><code>lsp-rust-server</code> Choose LSP server (default is rust-analyzer)</p>
+</li>
+<li>
+<p><code>lsp-rust-switch-server</code> Switch priorities of lsp servers</p>
+</li>
+</ul>
+<h2 id="rust-analyzer">rust-analyzer<a class="headerlink" href="#rust-analyzer" title="Permanent link">#</a></h2>
+<h3 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">#</a></h3>
+<h4 id="lsp-rust-analyzer-syntax-tree"><code>lsp-rust-analyzer-syntax-tree</code><a class="headerlink" href="#lsp-rust-analyzer-syntax-tree" title="Permanent link">#</a></h4>
+<p>Display syntax tree for current buffer</p>
+<p><img alt="" src="../../examples/lsp-rust-analyzer-syntax-tree.png" /></p>
+<h4 id="lsp-rust-analyzer-status"><code>lsp-rust-analyzer-status</code><a class="headerlink" href="#lsp-rust-analyzer-status" title="Permanent link">#</a></h4>
+<p>Display status information for rust-analyzer</p>
+<p><img alt="" src="../../examples/lsp-rust-analyzer-status.png" /></p>
+<h4 id="lsp-rust-analyzer-join-lines"><code>lsp-rust-analyzer-join-lines</code><a class="headerlink" href="#lsp-rust-analyzer-join-lines" title="Permanent link">#</a></h4>
+<p>Join selected lines into one, smartly fixing up whitespace and trailing commas</p>
+<p>before:</p>
+<p><img alt="" src="../../examples/lsp-rust-join-lines-before.png" /></p>
+<p>after:</p>
+<p><img alt="" src="../../examples/lsp-rust-join-lines-after.png" /></p>
+<h3 id="inlay-hints">inlay-hints<a class="headerlink" href="#inlay-hints" title="Permanent link">#</a></h3>
+<p><code>lsp-inlay-hints-mode</code> enables displaying of inlay hints</p>
+<p>Additionally, <code>lsp-inlay-hint-enable</code> must be set to <code>t</code> in order for inlay hints to render.</p>
+<p>NOTE: the inlay hints interact badly with the lsp-ui sideline, because it doesn't seem to consider the overlays in its width calculation, which often leads to lines wrapping around.</p>
+<p><img alt="" src="../../examples/lsp-rust-analyzer-inlay-hints.png" /></p>
+<h3 id="macro-expansion">Macro expansion<a class="headerlink" href="#macro-expansion" title="Permanent link">#</a></h3>
+<p><code>lsp-rust-analyzer-expand-macro</code> expand macro call at point recursively</p>
+<p>Use your own function for displaying macro expansion by customizing <code>lsp-rust-analyzer-macro-expansion-method</code></p>
+<p>Formatted and highlighted result with the default function of rustic.</p>
+<p><img alt="" src="../../examples/lsp-rust-macro-expansion.png" /></p>
+<h3 id="auto-import">auto-import<a class="headerlink" href="#auto-import" title="Permanent link">#</a></h3>
+<p>Get a list of possible auto import candidates with <code>lsp-execute-code-action</code></p>
+<p><img alt="" src="../../examples/lsp-rust-analyzer-auto-import.png" /></p>
+<h3 id="snippet-insertionrefactor">Snippet insertion/refactor<a class="headerlink" href="#snippet-insertionrefactor" title="Permanent link">#</a></h3>
+<p>To support refactorings that require snippet insertion(eg. generating
+derive clause etc), make sure that you have enabled <code>yasnippet</code> and
+<code>yas-minor-mode</code>. If you are using <code>use-package</code>, you can do something
+like this:</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nb">use-package</span> <span class="nv">yasnippet</span>
+  <span class="nb">:ensure</span> <span class="no">t</span>
+  <span class="nb">:hook</span> <span class="p">((</span><span class="nv">lsp-mode</span> <span class="o">.</span> <span class="nv">yas-minor-mode</span><span class="p">)))</span>
+</code></pre></div>
+<h3 id="open-cargotoml">Open Cargo.toml<a class="headerlink" href="#open-cargotoml" title="Permanent link">#</a></h3>
+<p><code>lsp-rust-analyzer-open-cargo-toml</code> opens the Cargo.toml closest to the current file. Calling it with a universal argument will open the Cargo.toml in another window.</p>
+<p>Corresponds to <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/docs/dev/lsp-extensions.md#open-cargotoml">the rust-analyzer LSP extension</a></p>
+<p><img alt="" src="../../examples/lsp-rust-analyzer-open-cargo-toml.gif" /></p>
+<h3 id="open-external-documentation">Open external documentation<a class="headerlink" href="#open-external-documentation" title="Permanent link">#</a></h3>
+<p><code>lsp-rust-analyzer-open-external-docs</code> opens external documentation related to the current position in a browser.</p>
+<p>Corresponds to <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/docs/dev/lsp-extensions.md#open-external-documentation">the rust-analyzer LSP extension</a></p>
+<h3 id="find-and-execute-tests-related-to-current-position">Find and execute tests related to current position<a class="headerlink" href="#find-and-execute-tests-related-to-current-position" title="Permanent link">#</a></h3>
+<p><code>lsp-rust-analyzer-related-tests</code> find all tests related to the current position, asks for user completion and executes the selected test in a compilation buffer.</p>
+<p>Corresponds to <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/docs/dev/lsp-extensions.md#related-tests">the rust-analyzer LSP extension</a></p>
+<p>In the example below, first you see that:
+   + On the left, the function <code>check_infer</code> is defined, on the right another
+     file is opened with many test functions, some of which call <code>check_infer</code>.
+     With the cursor on <code>check_infer</code>, call <code>lsp-rust-analyzer-related-tests</code>
+     and select <code>infer_pattern_match_slice</code> with fuzzy matching. The test is
+     executed on the right with compilation major mode</p>
+<ul>
+<li>Move the cursor to <code>fn ellipsize</code> and attempt to find related tests to no
+     avail. Confirm that the function is indeed untested by using swiper and
+     finding one place in the file, where the function is called</li>
+</ul>
+<p><img alt="" src="../../examples/lsp-rust-analyzer-find-related-tests.gif" /></p>
+<h3 id="caveats">Caveats<a class="headerlink" href="#caveats" title="Permanent link">#</a></h3>
+<ul>
+<li>Rust Analyzer does not support disabling snippets - https://github.com/rust-analyzer/rust-analyzer/issues/2518</li>
+</ul>
+<h3 id="extract-signature">extract signature<a class="headerlink" href="#extract-signature" title="Permanent link">#</a></h3>
+<p>This <a href="https://github.com/emacs-lsp/lsp-mode/pull/1740">unmerged PR</a> contains an example method that allows
+modifying the signature that is displayed by eldoc.</p>
+<h2 id="available-configurations">Available configurations<a class="headerlink" href="#available-configurations" title="Permanent link">#</a></h2>
+<h3 id="lsp-rust-server"><code>lsp-rust-server</code><a class="headerlink" href="#lsp-rust-server" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>(choice (const :tag rls rls) (const :tag rust-analyzer rust-analyzer))</code></p>
+<p><em>Default:</em> <code>rust-analyzer</code></p>
+<p>Choose LSP server.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-binding-mode-hints"><code>lsp-rust-analyzer-binding-mode-hints</code><a class="headerlink" href="#lsp-rust-analyzer-binding-mode-hints" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>boolean</code></p>
+<p><em>Default:</em> <code>nil</code></p>
+<p>Whether to show inlay type hints for binding modes.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-call-info-full"><code>lsp-rust-analyzer-call-info-full</code><a class="headerlink" href="#lsp-rust-analyzer-call-info-full" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>boolean</code></p>
+<p><em>Default:</em> <code>t</code></p>
+<p>Whether to show function name and docs in parameter hints.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-cargo-auto-reload"><code>lsp-rust-analyzer-cargo-auto-reload</code><a class="headerlink" href="#lsp-rust-analyzer-cargo-auto-reload" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>boolean</code></p>
+<p><em>Default:</em> <code>t</code></p>
+<p>Automatically refresh project info via <code>cargo metadata</code> on <code>Cargo.toml</code> changes.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-cargo-extra-args"><code>lsp-rust-analyzer-cargo-extra-args</code><a class="headerlink" href="#lsp-rust-analyzer-cargo-extra-args" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>lsp-string-vector</code></p>
+<p><em>Default:</em> <code>[]</code></p>
+<p>Extra arguments that are passed to every cargo invocation.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-cargo-extra-env"><code>lsp-rust-analyzer-cargo-extra-env</code><a class="headerlink" href="#lsp-rust-analyzer-cargo-extra-env" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>alist</code></p>
+<p><em>Default:</em> <code>#s(hash-table)</code></p>
+<p>Extra environment variables that will be set when running cargo, rustc or
+other commands within the workspace.  Useful for setting RUSTFLAGS.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-cargo-override-command"><code>lsp-rust-analyzer-cargo-override-command</code><a class="headerlink" href="#lsp-rust-analyzer-cargo-override-command" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>lsp-string-vector</code></p>
+<p><em>Default:</em> <code>[]</code></p>
+<p>Advanced option, fully override the command rust-analyzer uses for checking.
+The command should include <code>--message=format=json</code> or similar option.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-cargo-run-build-scripts"><code>lsp-rust-analyzer-cargo-run-build-scripts</code><a class="headerlink" href="#lsp-rust-analyzer-cargo-run-build-scripts" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>boolean</code></p>
+<p><em>Default:</em> <code>t</code></p>
+<p>Whether to run build scripts (<code>build.rs</code>) for more precise code analysis.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-cargo-target"><code>lsp-rust-analyzer-cargo-target</code><a class="headerlink" href="#lsp-rust-analyzer-cargo-target" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>(choice (string :tag Target) (const :tag None nil))</code></p>
+<p><em>Default:</em> <code>nil</code></p>
+<p>Compilation target (target triple).</p>
+<hr />
+<h3 id="lsp-rust-analyzer-cargo-target-dir"><code>lsp-rust-analyzer-cargo-target-dir</code><a class="headerlink" href="#lsp-rust-analyzer-cargo-target-dir" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>(choice (string :tag Directory) boolean)</code></p>
+<p><em>Default:</em> <code>nil</code></p>
+<p>Optional path to a rust-analyzer specific target directory.
+This prevents rust-analyzer<code>s</code>cargo check<code>and initial build-script and
+proc-macro building from locking the</code>Cargo.lock` at the expense of
+duplicating build artifacts.</p>
+<p>Set to <code>true</code> to use a subdirectory of the existing target directory or
+set to a path relative to the workspace to use that path.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-cargo-unset-test"><code>lsp-rust-analyzer-cargo-unset-test</code><a class="headerlink" href="#lsp-rust-analyzer-cargo-unset-test" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>lsp-string-vector</code></p>
+<p><em>Default:</em> <code>[]</code></p>
+<p>force rust-analyzer to unset <code>#[cfg(test)]</code> for the specified crates.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-cargo-watch-args"><code>lsp-rust-analyzer-cargo-watch-args</code><a class="headerlink" href="#lsp-rust-analyzer-cargo-watch-args" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>lsp-string-vector</code></p>
+<p><em>Default:</em> <code>[]</code></p>
+<p>Extra arguments for <code>cargo check</code>.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-cargo-watch-command"><code>lsp-rust-analyzer-cargo-watch-command</code><a class="headerlink" href="#lsp-rust-analyzer-cargo-watch-command" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>string</code></p>
+<p><em>Default:</em> <code>check</code></p>
+<p>Cargo watch command.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-cargo-watch-enable"><code>lsp-rust-analyzer-cargo-watch-enable</code><a class="headerlink" href="#lsp-rust-analyzer-cargo-watch-enable" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>boolean</code></p>
+<p><em>Default:</em> <code>t</code></p>
+<p>Enable Cargo watch.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-cfg-set-test"><code>lsp-rust-analyzer-cfg-set-test</code><a class="headerlink" href="#lsp-rust-analyzer-cfg-set-test" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>boolean</code></p>
+<p><em>Default:</em> <code>t</code></p>
+<p>force rust-analyzer to set <code>#[cfg(test)]</code> for the current crate / workspace.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-check-all-targets"><code>lsp-rust-analyzer-check-all-targets</code><a class="headerlink" href="#lsp-rust-analyzer-check-all-targets" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>boolean</code></p>
+<p><em>Default:</em> <code>t</code></p>
+<p>Enables --all-targets for <code>cargo check</code>.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-closing-brace-hints"><code>lsp-rust-analyzer-closing-brace-hints</code><a class="headerlink" href="#lsp-rust-analyzer-closing-brace-hints" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>boolean</code></p>
+<p><em>Default:</em> <code>t</code></p>
+<p>Whether to show inlay hints after a closing <code>}</code> to indicate what item it
+belongs to.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-closing-brace-hints-min-lines"><code>lsp-rust-analyzer-closing-brace-hints-min-lines</code><a class="headerlink" href="#lsp-rust-analyzer-closing-brace-hints-min-lines" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>integer</code></p>
+<p><em>Default:</em> <code>25</code></p>
+<p>Minimum number of lines required before the <code>}</code> until the hint is shown
+(set to 0 or 1 to always show them).</p>
+<hr />
+<h3 id="lsp-rust-analyzer-closure-capture-hints"><code>lsp-rust-analyzer-closure-capture-hints</code><a class="headerlink" href="#lsp-rust-analyzer-closure-capture-hints" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>boolean</code></p>
+<p><em>Default:</em> <code>nil</code></p>
+<p>Whether to show inlay hints for closure captures.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-closure-return-type-hints"><code>lsp-rust-analyzer-closure-return-type-hints</code><a class="headerlink" href="#lsp-rust-analyzer-closure-return-type-hints" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>(choice (const never) (const always) (const with_block))</code></p>
+<p><em>Default:</em> <code>never</code></p>
+<p>Whether to show inlay type hints for return types of closures.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-closure-style"><code>lsp-rust-analyzer-closure-style</code><a class="headerlink" href="#lsp-rust-analyzer-closure-style" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>string</code></p>
+<p><em>Default:</em> <code>impl_fn</code></p>
+<p>Closure notation in type and chaining inlay hints.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-completion-add-call-argument-snippets"><code>lsp-rust-analyzer-completion-add-call-argument-snippets</code><a class="headerlink" href="#lsp-rust-analyzer-completion-add-call-argument-snippets" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>boolean</code></p>
+<p><em>Default:</em> <code>t</code></p>
+<p>Whether to add argument snippets when completing functions.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-completion-add-call-parenthesis"><code>lsp-rust-analyzer-completion-add-call-parenthesis</code><a class="headerlink" href="#lsp-rust-analyzer-completion-add-call-parenthesis" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>boolean</code></p>
+<p><em>Default:</em> <code>t</code></p>
+<p>Whether to add parenthesis when completing functions.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-completion-auto-import-enable"><code>lsp-rust-analyzer-completion-auto-import-enable</code><a class="headerlink" href="#lsp-rust-analyzer-completion-auto-import-enable" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>boolean</code></p>
+<p><em>Default:</em> <code>t</code></p>
+<p>Toggles the additional completions that automatically add imports when
+completed. <code>lsp-completion-enable-additional-text-edit</code> must be non-nil
+ for this feature to be fully enabled.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-completion-auto-self-enable"><code>lsp-rust-analyzer-completion-auto-self-enable</code><a class="headerlink" href="#lsp-rust-analyzer-completion-auto-self-enable" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>boolean</code></p>
+<p><em>Default:</em> <code>t</code></p>
+<p>Toggles the additional completions that automatically show method calls
+and field accesses with self prefixed to them when inside a method.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-completion-postfix-enable"><code>lsp-rust-analyzer-completion-postfix-enable</code><a class="headerlink" href="#lsp-rust-analyzer-completion-postfix-enable" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>boolean</code></p>
+<p><em>Default:</em> <code>t</code></p>
+<p>Whether to show postfix snippets like <code>dbg</code>, <code>if</code>, <code>not</code>, etc.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-debug-lens-extra-dap-args"><code>lsp-rust-analyzer-debug-lens-extra-dap-args</code><a class="headerlink" href="#lsp-rust-analyzer-debug-lens-extra-dap-args" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>plist</code></p>
+<p><em>Default:</em> <code>(:MIMode gdb :miDebuggerPath gdb :stopAtEntry t :externalConsole :json-false)</code></p>
+<p>Extra arguments to pass to DAP template when debugging a test from code lens.</p>
+<p>As a rule of the thumb, do not add extra keys to this plist unless you exactly
+what you are doing, it might break the "Debug test" lens otherwise.</p>
+<p>See dap-mode documentation and cpptools documentation for the extra variables
+meaning.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-diagnostics-disabled"><code>lsp-rust-analyzer-diagnostics-disabled</code><a class="headerlink" href="#lsp-rust-analyzer-diagnostics-disabled" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>lsp-string-vector</code></p>
+<p><em>Default:</em> <code>[]</code></p>
+<p>List of native rust-analyzer diagnostics to disable.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-diagnostics-enable"><code>lsp-rust-analyzer-diagnostics-enable</code><a class="headerlink" href="#lsp-rust-analyzer-diagnostics-enable" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>boolean</code></p>
+<p><em>Default:</em> <code>t</code></p>
+<p>Whether to show native rust-analyzer diagnostics.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-diagnostics-enable-experimental"><code>lsp-rust-analyzer-diagnostics-enable-experimental</code><a class="headerlink" href="#lsp-rust-analyzer-diagnostics-enable-experimental" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>boolean</code></p>
+<p><em>Default:</em> <code>nil</code></p>
+<p>Whether to show native rust-analyzer diagnostics that are still experimental
+(might have more false positives than usual).</p>
+<hr />
+<h3 id="lsp-rust-analyzer-diagnostics-warnings-as-hint"><code>lsp-rust-analyzer-diagnostics-warnings-as-hint</code><a class="headerlink" href="#lsp-rust-analyzer-diagnostics-warnings-as-hint" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>lsp-string-vector</code></p>
+<p><em>Default:</em> <code>[]</code></p>
+<p>List of warnings that should be displayed with hint severity.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-diagnostics-warnings-as-info"><code>lsp-rust-analyzer-diagnostics-warnings-as-info</code><a class="headerlink" href="#lsp-rust-analyzer-diagnostics-warnings-as-info" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>lsp-string-vector</code></p>
+<p><em>Default:</em> <code>[]</code></p>
+<p>List of warnings that should be displayed with info severity.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-discriminants-hints"><code>lsp-rust-analyzer-discriminants-hints</code><a class="headerlink" href="#lsp-rust-analyzer-discriminants-hints" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>(choice (const never) (const always) (const fieldless))</code></p>
+<p><em>Default:</em> <code>never</code></p>
+<p>Whether to show enum variant discriminant hints.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-display-chaining-hints"><code>lsp-rust-analyzer-display-chaining-hints</code><a class="headerlink" href="#lsp-rust-analyzer-display-chaining-hints" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>boolean</code></p>
+<p><em>Default:</em> <code>nil</code></p>
+<p>Whether to show inlay type hints for method chains.  These
+hints will be formatted with the type hint formatting options, if
+the mode is not configured to ask the server to format them.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-display-closure-return-type-hints"><code>lsp-rust-analyzer-display-closure-return-type-hints</code><a class="headerlink" href="#lsp-rust-analyzer-display-closure-return-type-hints" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>boolean</code></p>
+<p><em>Default:</em> <code>nil</code></p>
+<p>Whether to show closure return type inlay hints for closures
+with block bodies.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-display-lifetime-elision-hints-enable"><code>lsp-rust-analyzer-display-lifetime-elision-hints-enable</code><a class="headerlink" href="#lsp-rust-analyzer-display-lifetime-elision-hints-enable" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>(choice (const never) (const always) (const skip_trivial))</code></p>
+<p><em>Default:</em> <code>never</code></p>
+<p>Whether to show elided lifetime inlay hints.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-display-lifetime-elision-hints-use-parameter-names"><code>lsp-rust-analyzer-display-lifetime-elision-hints-use-parameter-names</code><a class="headerlink" href="#lsp-rust-analyzer-display-lifetime-elision-hints-use-parameter-names" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>boolean</code></p>
+<p><em>Default:</em> <code>nil</code></p>
+<p>When showing elided lifetime inlay hints, whether to use
+parameter names or numeric placeholder names for the lifetimes.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-display-parameter-hints"><code>lsp-rust-analyzer-display-parameter-hints</code><a class="headerlink" href="#lsp-rust-analyzer-display-parameter-hints" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>boolean</code></p>
+<p><em>Default:</em> <code>nil</code></p>
+<p>Whether to show function parameter name inlay hints at the call site.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-display-reborrow-hints"><code>lsp-rust-analyzer-display-reborrow-hints</code><a class="headerlink" href="#lsp-rust-analyzer-display-reborrow-hints" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>(choice (const always) (const never) (const mutable))</code></p>
+<p><em>Default:</em> <code>never</code></p>
+<p>Whether to show inlay type hints for compiler inserted reborrows.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-download-url"><code>lsp-rust-analyzer-download-url</code><a class="headerlink" href="#lsp-rust-analyzer-download-url" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>string</code></p>
+<p><em>Default:</em> <code>https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz</code></p>
+<p>Automatic download url for Rust Analyzer</p>
+<hr />
+<h3 id="lsp-rust-analyzer-exclude-dirs"><code>lsp-rust-analyzer-exclude-dirs</code><a class="headerlink" href="#lsp-rust-analyzer-exclude-dirs" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>lsp-string-vector</code></p>
+<p><em>Default:</em> <code>[]</code></p>
+<p>These directories will be ignored by rust-analyzer.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-exclude-globs"><code>lsp-rust-analyzer-exclude-globs</code><a class="headerlink" href="#lsp-rust-analyzer-exclude-globs" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>lsp-string-vector</code></p>
+<p><em>Default:</em> <code>[]</code></p>
+<p>Exclude globs</p>
+<hr />
+<h3 id="lsp-rust-analyzer-experimental-proc-attr-macros"><code>lsp-rust-analyzer-experimental-proc-attr-macros</code><a class="headerlink" href="#lsp-rust-analyzer-experimental-proc-attr-macros" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>boolean</code></p>
+<p><em>Default:</em> <code>t</code></p>
+<p>Whether to enable experimental support for expanding proc macro attributes.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-expression-adjustment-hide-unsafe"><code>lsp-rust-analyzer-expression-adjustment-hide-unsafe</code><a class="headerlink" href="#lsp-rust-analyzer-expression-adjustment-hide-unsafe" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>boolean</code></p>
+<p><em>Default:</em> <code>nil</code></p>
+<p>Whether to hide inlay hints for type adjustments outside of
+<code>unsafe</code> blocks.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-expression-adjustment-hints"><code>lsp-rust-analyzer-expression-adjustment-hints</code><a class="headerlink" href="#lsp-rust-analyzer-expression-adjustment-hints" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>(choice (const never) (const always) (const reborrow))</code></p>
+<p><em>Default:</em> <code>never</code></p>
+<p>Whether to show inlay hints for type adjustments..</p>
+<hr />
+<h3 id="lsp-rust-analyzer-expression-adjustment-hints-mode"><code>lsp-rust-analyzer-expression-adjustment-hints-mode</code><a class="headerlink" href="#lsp-rust-analyzer-expression-adjustment-hints-mode" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>(choice (const prefix) (const postfix) (const prefer_prefix) (const prefer_postfix))</code></p>
+<p><em>Default:</em> <code>prefix</code></p>
+<p>Whether to show inlay hints as postfix ops (<code>.*</code> instead of <code>*</code>, etc).</p>
+<hr />
+<h3 id="lsp-rust-analyzer-hide-closure-initialization"><code>lsp-rust-analyzer-hide-closure-initialization</code><a class="headerlink" href="#lsp-rust-analyzer-hide-closure-initialization" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>boolean</code></p>
+<p><em>Default:</em> <code>nil</code></p>
+<p>Whether to hide inlay type hints for <code>let</code> statements that initialize
+to a closure. Only applies to closures with blocks, same as
+<code>#rust-analyzer.inlayHints.closureReturnTypeHints.enable#</code>.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-hide-named-constructor"><code>lsp-rust-analyzer-hide-named-constructor</code><a class="headerlink" href="#lsp-rust-analyzer-hide-named-constructor" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>boolean</code></p>
+<p><em>Default:</em> <code>nil</code></p>
+<p>Whether to hide inlay type hints for constructors.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-highlight-breakpoints"><code>lsp-rust-analyzer-highlight-breakpoints</code><a class="headerlink" href="#lsp-rust-analyzer-highlight-breakpoints" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>boolean</code></p>
+<p><em>Default:</em> <code>t</code></p>
+<p>Enables highlighting of related references while the cursor is on
+<code>break</code>, <code>loop</code>, <code>while</code>, or <code>for</code> keywords.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-highlight-closure-captures"><code>lsp-rust-analyzer-highlight-closure-captures</code><a class="headerlink" href="#lsp-rust-analyzer-highlight-closure-captures" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>boolean</code></p>
+<p><em>Default:</em> <code>t</code></p>
+<p>Enables highlighting of all captures of a closure while the
+cursor is on the <code>|</code> or move keyword of a closure.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-highlight-exit-points"><code>lsp-rust-analyzer-highlight-exit-points</code><a class="headerlink" href="#lsp-rust-analyzer-highlight-exit-points" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>boolean</code></p>
+<p><em>Default:</em> <code>t</code></p>
+<p>Enables highlighting of all exit points while the cursor is on
+any <code>return</code>, <code>?</code>, <code>fn</code>, or return type arrow (<code>-&gt;</code>).</p>
+<hr />
+<h3 id="lsp-rust-analyzer-highlight-references"><code>lsp-rust-analyzer-highlight-references</code><a class="headerlink" href="#lsp-rust-analyzer-highlight-references" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>boolean</code></p>
+<p><em>Default:</em> <code>t</code></p>
+<p>Enables highlighting of related references while the cursor is on
+any identifier.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-highlight-yield-points"><code>lsp-rust-analyzer-highlight-yield-points</code><a class="headerlink" href="#lsp-rust-analyzer-highlight-yield-points" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>boolean</code></p>
+<p><em>Default:</em> <code>t</code></p>
+<p>Enables highlighting of all break points for a loop or block
+context while the cursor is on any <code>async</code> or <code>await</code> keywords.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-highlighting-strings"><code>lsp-rust-analyzer-highlighting-strings</code><a class="headerlink" href="#lsp-rust-analyzer-highlighting-strings" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>boolean</code></p>
+<p><em>Default:</em> <code>t</code></p>
+<p>Use semantic tokens for strings.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-implicit-drops"><code>lsp-rust-analyzer-implicit-drops</code><a class="headerlink" href="#lsp-rust-analyzer-implicit-drops" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>boolean</code></p>
+<p><em>Default:</em> <code>nil</code></p>
+<p>Whether to show implicit drop hints.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-import-enforce-granularity"><code>lsp-rust-analyzer-import-enforce-granularity</code><a class="headerlink" href="#lsp-rust-analyzer-import-enforce-granularity" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>boolean</code></p>
+<p><em>Default:</em> <code>nil</code></p>
+<p>Whether to enforce the import granularity setting for all files.
+ If set to nil rust-analyzer will try to keep import styles consistent per file.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-import-granularity"><code>lsp-rust-analyzer-import-granularity</code><a class="headerlink" href="#lsp-rust-analyzer-import-granularity" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>(choice (const :tag Merge imports from the same crate into a single use statement. This kind of nesting is only supported in Rust versions later than 1.24. crate) (const :tag Merge imports from the same module into a single use statement. module) (const :tag Don’t merge imports at all, creating one import per item. item) (const :tag Do not change the granularity of any imports. For auto-import this has the same effect as</code>"item"' preserve))`</p>
+<p><em>Default:</em> <code>crate</code></p>
+<p>How imports should be grouped into use statements.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-import-group"><code>lsp-rust-analyzer-import-group</code><a class="headerlink" href="#lsp-rust-analyzer-import-group" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>boolean</code></p>
+<p><em>Default:</em> <code>t</code></p>
+<p>Group inserted imports by the following order:
+https://rust-analyzer.github.io/manual.html#auto-import.
+ Groups are separated by newlines.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-import-prefix"><code>lsp-rust-analyzer-import-prefix</code><a class="headerlink" href="#lsp-rust-analyzer-import-prefix" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>(choice (const plain) (const by_self) (const by_crate))</code></p>
+<p><em>Default:</em> <code>plain</code></p>
+<p>The path structure for newly inserted paths to use.
+Valid values are:
+ - "plain": Insert import paths relative to the current module, using up to
+one <code>super</code> prefix if the parent module contains the requested item.
+ - "by_self": Prefix all import paths with <code>self</code> if they don<code>t begin with</code>self<code>,</code>super<code>,</code>crate<code>or a crate name.
+ - "by_crate": Force import paths to be absolute by always starting
+them with</code>crate` or the crate name they refer to.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-imports-merge-glob"><code>lsp-rust-analyzer-imports-merge-glob</code><a class="headerlink" href="#lsp-rust-analyzer-imports-merge-glob" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>boolean</code></p>
+<p><em>Default:</em> <code>t</code></p>
+<p>Whether to allow import insertion to merge new imports into single path
+glob imports like <code>use std::fmt::*;</code>.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-library-directories"><code>lsp-rust-analyzer-library-directories</code><a class="headerlink" href="#lsp-rust-analyzer-library-directories" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>(repeat string)</code></p>
+<p><em>Default:</em> <code>(~/.cargo/git ~/.cargo/registry/src ~/.rustup/toolchains)</code></p>
+<p>List of directories which will be considered to be libraries.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-linked-projects"><code>lsp-rust-analyzer-linked-projects</code><a class="headerlink" href="#lsp-rust-analyzer-linked-projects" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>lsp-string-vector</code></p>
+<p><em>Default:</em> <code>[]</code></p>
+<p>Disable project auto-discovery in favor of explicitly specified set of
+projects. Elements must be paths pointing to <code>Cargo.toml</code>, <code>rust-project.json</code>,
+or JSON objects in <code>rust-project.json</code> format.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-lru-capacity"><code>lsp-rust-analyzer-lru-capacity</code><a class="headerlink" href="#lsp-rust-analyzer-lru-capacity" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>integer</code></p>
+<p><em>Default:</em> <code>nil</code></p>
+<p>Number of syntax trees rust-analyzer keeps in memory.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-macro-expansion-method"><code>lsp-rust-analyzer-macro-expansion-method</code><a class="headerlink" href="#lsp-rust-analyzer-macro-expansion-method" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>function</code></p>
+<p><em>Default:</em> <code>lsp-rust-analyzer-macro-expansion-default</code></p>
+<p>Use a different function if you want formatted macro expansion results and
+syntax highlighting.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-max-inlay-hint-length"><code>lsp-rust-analyzer-max-inlay-hint-length</code><a class="headerlink" href="#lsp-rust-analyzer-max-inlay-hint-length" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>integer</code></p>
+<p><em>Default:</em> <code>nil</code></p>
+<p>Max inlay hint length.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-proc-macro-enable"><code>lsp-rust-analyzer-proc-macro-enable</code><a class="headerlink" href="#lsp-rust-analyzer-proc-macro-enable" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>boolean</code></p>
+<p><em>Default:</em> <code>t</code></p>
+<p>Enable Proc macro support.
+Implies <code>lsp-rust-analyzer-cargo-run-build-scripts</code></p>
+<hr />
+<h3 id="lsp-rust-analyzer-rustc-source"><code>lsp-rust-analyzer-rustc-source</code><a class="headerlink" href="#lsp-rust-analyzer-rustc-source" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>(choice (file :tag Path) (const :tag None nil))</code></p>
+<p><em>Default:</em> <code>nil</code></p>
+<p>Path to the Cargo.toml of the rust compiler workspace.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-rustfmt-extra-args"><code>lsp-rust-analyzer-rustfmt-extra-args</code><a class="headerlink" href="#lsp-rust-analyzer-rustfmt-extra-args" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>lsp-string-vector</code></p>
+<p><em>Default:</em> <code>[]</code></p>
+<p>Additional arguments to rustfmt.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-rustfmt-override-command"><code>lsp-rust-analyzer-rustfmt-override-command</code><a class="headerlink" href="#lsp-rust-analyzer-rustfmt-override-command" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>lsp-string-vector</code></p>
+<p><em>Default:</em> <code>[]</code></p>
+<p>Advanced option, fully override the command rust-analyzer uses
+for formatting.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-rustfmt-rangeformatting-enable"><code>lsp-rust-analyzer-rustfmt-rangeformatting-enable</code><a class="headerlink" href="#lsp-rust-analyzer-rustfmt-rangeformatting-enable" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>boolean</code></p>
+<p><em>Default:</em> <code>nil</code></p>
+<p>Enables the use of rustfmt<code>s unstable range formatting command for the</code>textDocument/rangeFormatting` request. The rustfmt option is unstable and only
+available on a nightly build.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-server-command"><code>lsp-rust-analyzer-server-command</code><a class="headerlink" href="#lsp-rust-analyzer-server-command" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>(repeat string)</code></p>
+<p><em>Default:</em> <code>(rust-analyzer)</code></p>
+<p>Command to start rust-analyzer.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-server-format-inlay-hints"><code>lsp-rust-analyzer-server-format-inlay-hints</code><a class="headerlink" href="#lsp-rust-analyzer-server-format-inlay-hints" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>boolean</code></p>
+<p><em>Default:</em> <code>t</code></p>
+<p>Whether to ask rust-analyzer to format inlay hints itself.  If
+active, the various inlay format settings are not used.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-store-path"><code>lsp-rust-analyzer-store-path</code><a class="headerlink" href="#lsp-rust-analyzer-store-path" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>file</code></p>
+<p><em>Default:</em> <code>~/work/lsp-mode/lsp-mode/docs/.eask/30.2/.cache/lsp/rust/rust-analyzer</code></p>
+<p>The path to the file in which <code>rust-analyzer</code> will be stored.</p>
+<hr />
+<h3 id="lsp-rust-analyzer-use-client-watching"><code>lsp-rust-analyzer-use-client-watching</code><a class="headerlink" href="#lsp-rust-analyzer-use-client-watching" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>boolean</code></p>
+<p><em>Default:</em> <code>t</code></p>
+<p>Use client watching</p>
+<hr />
+<h3 id="lsp-rust-analyzer-use-rustc-wrapper-for-build-scripts"><code>lsp-rust-analyzer-use-rustc-wrapper-for-build-scripts</code><a class="headerlink" href="#lsp-rust-analyzer-use-rustc-wrapper-for-build-scripts" title="Permanent link">#</a></h3>
+<p><em>Type:</em> <code>boolean</code></p>
+<p><em>Default:</em> <code>t</code></p>
+<p>Use <code>RUSTC_WRAPPER=rust-analyzer</code> when running build scripts to avoid
+compiling unnecessary things.</p>
+<hr />
+
+<!-- Source file information -->
+
+  <hr>
+<div class="md-source-file">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 16, 2020</span>
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 22, 2025</span>
+      
     
   </small>
 </div>
-                  
-                
-              
-              
-                
-
 
               
             </article>
           </div>
         </div>
+        
       </main>
       
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
         
-<footer class="md-footer">
+        <a href="../lsp-typeprof/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Ruby (TypeProf)" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Ruby (TypeProf)
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../lsp-rust-rls/" class="md-footer__link md-footer__link--next" aria-label="Next: Rust (rls)" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Rust (rls)
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-        Made with
-        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-          Material for MkDocs
-        </a>
-      </div>
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
       
-  <div class="md-footer-social">
+        <div class="md-social">
+  
+    
     
       
       
-        
-        
-      
-      <a href="https://github.com/emacs-lsp/lsp-mode" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
-      </a>
+    
+    <a href="https://github.com/emacs-lsp/lsp-mode" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
     
       
       
-        
-        
-      
-      <a href="https://twitter.com/yonchovski" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
-      </a>
+    
+    <a href="https://twitter.com/yonchovski" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
     
       
       
-        
-        
-      
-      <a href="https://gitter.im/emacs-lsp/lsp-mode" target="_blank" rel="noopener" title="gitter.im" class="md-footer-social__link">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M66.4 322.5H16V0h50.4v322.5zM166.9 76.1h-50.4V512h50.4V76.1zm100.6 0h-50.4V512h50.4V76.1zM368 76h-50.4v247H368V76z"/></svg>
-      </a>
     
-  </div>
-
+    <a href="https://discord.gg/swuxy5AAgT" target="_blank" rel="noopener" title="discord.gg" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541zM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241z"/></svg>
+    </a>
+  
+</div>
+      
     </div>
   </div>
 </footer>
       
     </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.01824240.min.js"}</script>
     
-      <script src="../../assets/javascripts/vendor.c6483021.min.js"></script>
-      <script src="../../assets/javascripts/bundle.e2f7d7a4.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
-      
-      <script>
-        app = initialize({
-          base: "../..",
-          features: ['navigation.tabs'],
-          search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.cbc634e2.min.js"
-          }, typeof search !== "undefined" && search)
-        })
-      </script>
+    
+      <script src="../../assets/javascripts/bundle.e8a254df.min.js"></script>
       
         <script src="../../js/expanded_nav.js"></script>
       
