@@ -9729,7 +9729,8 @@ Determined at load time to avoid runtime performance impact.")
 Returns t if org 9.7+ API is available (property-based), nil otherwise."
   (with-temp-buffer
     (insert "#+BEGIN_SRC emacs-lisp\n(+ 1 1)\n#+END_SRC")
-    (org-mode)
+    (ignore-errors
+      (org-mode))
     (goto-char (point-min))
     (let ((elem (org-element-context)))
       (not (plist-member (cl-second elem) :begin)))))
